@@ -67,6 +67,12 @@
 
 - **Migration files that create a database based on a [diagram](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd_v1_1.png)**
 
+- **Models for each of the tables in the database**
+
+- **Methods that updates counters**
+
+- **Methods that alows to select recent comments and posts**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,14 +98,36 @@ Clone this repository to your desired folder:
 
 ### Usage
 
-You need to open the terminal and and navigate to the clone repository, run the command:
+You need to open the terminal and and navigate to the clone repository, run the commands to create the database and start the app:
 
 ```sh
+  rails db:create
+  rails db:migrate
   rails s
 ```
-
 Navigate to http://localhost:3000 and see the functional app.
 
+You can test the app from the terminal with:
+
+```sh
+  rails c
+```
+Try to run this commands and check the changes into your database.
+
+```sh
+  # Create users
+  first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
+  second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
+
+  # Create a post from one user
+  first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
+
+  # Create a comment for the post
+  Comment.create(post: first_post, author: second_user, text: 'Hi Tom!' )
+
+  # Create a like for the post
+  Like.create(user: first_user, post: first_post)
+```
 
 To check the linters you can use the command:
 
@@ -131,7 +159,6 @@ To fix the linter use:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Controllers specs.**
-- [ ] **Processing data in models.**
 - [ ] **Setup and controllers.**
 - [ ] **Views.**
 - [ ] **Forms.**
