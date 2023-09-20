@@ -11,6 +11,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Tests](#tests)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -55,6 +56,12 @@
   </ul>
 </details>
 
+<summary>RSpec</summary>
+  <ul>
+    <li><a href="https://hackernoon.com/how-to-write-your-first-tests-using-rspec-in-rails-applications-hhfk2bqs">In Rails</a></li>
+  </ul>
+</details>
+
 <details>
 <summary>Linters</summary>
   <ul>
@@ -72,6 +79,8 @@
 - **Methods that updates counters**
 
 - **Methods that alows to select recent comments and posts**
+
+- **RSpec unit test for the validations, associations and methods**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -141,6 +150,16 @@ To fix the linter use:
   rubocop --A
 ```
 
+### Tests
+
+To run the test use the command:
+
+```sh
+  bundle exec rspec
+```
+
+Or just `rspec`, additional you can specify the path of one specific file if you don't want to run all the tests.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -158,11 +177,10 @@ To fix the linter use:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Controllers specs.**
 - [ ] **Setup and controllers.**
 - [ ] **Views.**
 - [ ] **Forms.**
-- [ ] **Validations, Model specs, and n+1 problems.**
+- [ ] **n+1 problems.**
 - [ ] **Add Devise.**
 - [ ] **Add authorization rules.**
 - [ ] **Integration specs for Views.**
