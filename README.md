@@ -1,6 +1,7 @@
 <a name="readme-top"></a>
 <div align="center">
 
+  <img src=app/assets/images/logo.png width=220px>
   <h1><b>Blog App</b></h1>
 
 </div>
@@ -56,6 +57,7 @@
   </ul>
 </details>
 
+<details>
 <summary>RSpec</summary>
   <ul>
     <li><a href="https://hackernoon.com/how-to-write-your-first-tests-using-rspec-in-rails-applications-hhfk2bqs">In Rails</a></li>
@@ -81,6 +83,8 @@
 - **Methods that alows to select recent comments and posts**
 
 - **RSpec unit test for the validations, associations and methods**
+
+- **Routes, controllers and simple placeholder views**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -177,7 +181,6 @@ Or just `rspec`, additional you can specify the path of one specific file if you
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Setup and controllers.**
 - [ ] **Views.**
 - [ ] **Forms.**
 - [ ] **n+1 problems.**
