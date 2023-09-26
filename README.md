@@ -82,7 +82,7 @@
 
 - **Methods that alows to select recent comments and posts**
 
-- **RSpec unit test for the validations, associations and methods**
+- **RSpec unit test for the validations, associations, methods, requests**
 
 - **Routes, controllers and simple placeholder views**
 
