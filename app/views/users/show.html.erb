@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
+<section class="user-container d-flex-col">
+  <%= render partial: 'user_card', object: @user, as: :user %>
 
-  <body>
-    <h2>Info from specific user</h2>
-  </body>
-</html>
+  <div class="border bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+
+  <div class="d-flex-col post-container">
+    <%= render partial: 'posts/posts_card', collection: @user.three_recent_posts.reverse, as: :post %>
+  </div>
+  <div class="d-flex btn-nav">
+    <%= show_all_post(@user) %>
+    <%= navigation_buttons %>
+  </div>
+</section>
+<span class="tests">Info from specific user</span>
