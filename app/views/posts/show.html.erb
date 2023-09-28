@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
-
-  <body>
-    <h2>Post and its comments</h2>
-  </body>
-</html>
+<div class="user-container d-flex-col">
+  <div class ="border post-detail">
+    <h3><%= @post.title %> by <%= @post.author.name %></h3>
+    <div class="counters d-flex">
+      <span>Comments: <%= @post.comments_counter %></span>
+      <span>Likes: <%= @post.likes_counter %></span>
+    </div>
+    <span><%= @post.text %></span>
+  </div>
+  <%= show_all_comments(@post) %>
+  <div class="d-flex btn-nav">
+    <%= navigation_buttons %>
+  </div>
+</div>
+<span class="tests">Post and its comments</span>
