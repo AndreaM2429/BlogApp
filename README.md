@@ -84,7 +84,9 @@
 
 - **RSpec unit test for the validations, associations, methods, requests**
 
-- **Routes, controllers and simple placeholder views**
+- **Routes and controllers**
+
+- **Views**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -181,7 +183,6 @@ Or just `rspec`, additional you can specify the path of one specific file if you
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Views.**
 - [ ] **Forms.**
 - [ ] **n+1 problems.**
 - [ ] **Add Devise.**

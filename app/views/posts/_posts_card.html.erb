@@ -1,0 +1,10 @@
+<div class="border post-container">
+  <%= link_to user_post_path(post.author, post) do %>
+  <h3><%= post.title %></h3>
+  <span><%= trim_post_text(post.text) %></span>
+  <div class="counters d-flex">
+    <span>Comments: <%= post.comments_counter %></span>
+    <span>Likes: <%= post.likes_counter %></span>
+  </div>
+  <%end%>
+</div>
