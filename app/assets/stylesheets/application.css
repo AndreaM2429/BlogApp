@@ -14,108 +14,108 @@
  *= require_self
  */
 
- .tests {
+.tests {
   display: none;
- }
+}
 
 .d-flex {
   display: flex;
   justify-content: center;
- }
+}
 
- .d-flex-col {
+.d-flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+}
 
- body {
+body {
   margin: 0;
   padding: 0;
- }
+}
 
- .info-container {
+.info-container {
   justify-content: space-between;
- }
+}
 
- .info-container img {
+.info-container img {
   width: 32%;
- }
+}
 
- .user-container {
+.user-container {
   width: 90%;
   gap: 20px;
   padding-top: 24px;
- }
+}
 
- .user-info {
+.user-info {
   flex-direction: column;
   width: 60vw;
   text-align: end;
   justify-content: end;
- }
+}
 
- .user-info h3 {
+h3 {
+  margin-top: 0;
+}
+
+.user-info h3 {
   justify-content: left;
- }
+}
 
- a {
+a {
   text-decoration: none;
   color: black;
   gap: 20px;
- }
+}
 
- .border {
+.border {
   border: 1px solid black;
   padding: 10px;
- }
+}
 
- .no-post {
+.no-post {
   font-size: 26px;
   font-style: italic;
   font-weight: 600;
- }
+}
 
- .post-container,
- .btn-nav {
+.post-container,
+.btn-nav {
   gap: 10px;
- }
+}
 
- h3 {
-  margin-top: 0;
- }
-
- .counters {
+.counters {
   justify-content: end;
   padding-top: 10px;
   padding-bottom: 10px;
   gap: 12px;
- }
+}
 
- .comments-list {
+.comments-list {
   list-style: none;
   margin-top: 2px;
   width: 93%;
- }
+}
 
- .comments-list p {
+.comments-list p {
   margin: 2px;
- }
+}
 
- .post-detail h3 {
+.post-detail h3 {
   margin: 0;
- }
+}
 
- .btn-nav {
+.btn-nav {
   margin-bottom: 15px;
- }
+}
 
- .btn-nav button {
+.btn-nav button {
   width: 100px;
   height: 30px;
- }
+}
 
- @media (min-width: 580px) {
+@media (min-width: 580px) {
   .info-container {
     width: 80%;
   }
@@ -129,9 +129,9 @@
   .post-detail {
     width: 87%;
   }
- }
+}
 
- @media (min-width: 768px) {
+@media (min-width: 768px) {
   .info-container {
     justify-content: center;
   }
@@ -151,16 +151,16 @@
   .user-info {
     width: 450px;
   }
-  
+
   .bio,
   .post-container,
   .comments-list,
   .post-detail {
     width: 619px;
   }
- }
+}
 
- @media (min-width: 964px) {
+@media (min-width: 964px) {
   .info-container {
     width: 70%;
   }
@@ -168,9 +168,9 @@
   .bio {
     width: 618px;
   }
- }
+}
 
- @media (min-width: 1130px) {
+@media (min-width: 1130px) {
   .info-container {
     width: 900px;
   }
@@ -185,5 +185,4 @@
   .post-detail {
     width: 770px;
   }
- }
- 
+}
