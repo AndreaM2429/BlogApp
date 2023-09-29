@@ -1,0 +1,18 @@
+<section class="user-container d-flex-col">
+<h3 class="add-post">Add new comment</h3>
+<%= form_with(model:[@user, @post, @comment]) do |form| %>
+  <div class="form-div">
+    <%= form.label :author, "#{@current.name}" %>
+  </div>
+  <div class="form-div">
+    <%= form.label :text, "Comment:" %>
+    <%= form.text_area :text %>
+  </div>
+  <div>
+    <%= form.submit "Submit" %>
+  </div class="form-div">
+<% end %>
+<div class="d-flex btn-nav">
+    <%= navigation_buttons %>
+  </div>
+</section>
