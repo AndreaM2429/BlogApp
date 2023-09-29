@@ -46,6 +46,7 @@ body {
   width: 90%;
   gap: 20px;
   padding-top: 24px;
+  background-color: bisque;
 }
 
 .user-info {
@@ -110,13 +111,65 @@ a {
   margin-bottom: 15px;
 }
 
-.btn-nav button {
+form {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.btn-comen form {
+  width: 80px;
+  padding: 0;
+}
+
+.btn-nav button,
+input[type='submit'],
+.btn-cont button {
   width: 100px;
   height: 30px;
 }
 
+.btn-comen button {
+  height: 40px;
+}
+
+.btn-comen form button {
+  width: 60px;
+}
+
+.add-post {
+  text-align: center;
+  font-size: 30px;
+}
+
+form input[type='text'],
+.form-div {
+  width: 72%;
+}
+
+#post_text,
+#comment_text {
+  width: 85%;
+  height: 60px;
+}
+
+label {
+  font-size: 20px;
+}
+
+.btn-cont,
+.btn-comen {
+  width: 100%;
+  justify-content: end;
+  gap: 5px;
+}
+
 @media (min-width: 580px) {
-  .info-container {
+  .info-container,
+  .btn-cont {
     width: 80%;
   }
 
@@ -126,7 +179,8 @@ a {
 
   .post-container,
   .comments-list,
-  .post-detail {
+  .post-detail,
+  .btn-comen {
     width: 87%;
   }
 }
@@ -155,7 +209,9 @@ a {
   .bio,
   .post-container,
   .comments-list,
-  .post-detail {
+  .post-detail,
+  .btn-comen,
+  .btn-cont {
     width: 619px;
   }
 }
@@ -167,6 +223,14 @@ a {
 
   .bio {
     width: 618px;
+  }
+
+  .user-container form {
+    width: 587px;
+  }
+
+  .btn-comen form {
+    width: 80px;
   }
 }
 
@@ -182,7 +246,17 @@ a {
   .bio,
   .post-container,
   .comments-list,
-  .post-detail {
+  .post-detail,
+  .btn-comen,
+  .btn-cont {
     width: 770px;
+  }
+
+  .user-container form {
+    width: 587px;
+  }
+
+  .btn-comen form {
+    width: 80px;
   }
 }
