@@ -88,6 +88,10 @@
 
 - **Views**
 
+- **Forms to add a comment and post**
+
+- **Add and delete a like**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,7 +187,6 @@ Or just `rspec`, additional you can specify the path of one specific file if you
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Forms.**
 - [ ] **n+1 problems.**
 - [ ] **Add Devise.**
 - [ ] **Add authorization rules.**
