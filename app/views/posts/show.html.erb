@@ -7,6 +7,12 @@
     </div>
     <span><%= @post.text %></span>
   </div>
+
+  <div class="btn-comen d-flex">
+    <button><%= link_to 'Create comment', new_user_post_comment_path(@post.author,@post) %></button>
+    <%= add_like %>
+  </div>
+
   <%= show_all_comments(@post) %>
   <div class="d-flex btn-nav">
     <%= navigation_buttons %>
