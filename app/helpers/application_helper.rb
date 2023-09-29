@@ -38,6 +38,17 @@ module ApplicationHelper
     tag.html_safe
   end
 
+  def buttons_new_actions
+    nav = ''
+    if controller_name == 'posts' && action_name == 'new'
+      nav << "<button>#{link_to 'User posts', user_posts_path}</button>"
+    end
+    if controller_name == 'comments' && action_name == 'new'
+      nav << "<button>#{link_to 'Back to post', user_post_path(@user, @post)}</button>"
+    end
+    nav
+  end
+
   def navigation_buttons
     nav = ''
     unless controller_name == 'users' && action_name == 'index'
@@ -49,12 +60,7 @@ module ApplicationHelper
     if controller_name == 'posts' && action_name == 'show'
       nav << "<button>#{link_to 'User posts', user_posts_path}</button>"
     end
-    if controller_name == 'posts' && action_name == 'new'
-      nav << "<button>#{link_to 'User posts', user_posts_path}</button>"
-    end
-    if controller_name == 'comments' && action_name == 'new'
-      nav << "<button>#{link_to 'Back to post', user_post_path(@user,@post)}</button>"
-    end
+    nav << buttons_new_actions
     nav.html_safe
   end
 
@@ -63,6 +69,6 @@ module ApplicationHelper
       button_to "Don't like", deletelike_user_post_path(@post.author, @post), method: :delete, class: 'btn-like'
     else
       button_to 'Like', createlike_user_post_path(@post.author, @post), method: :post, class: 'btn-like'
-    end      
+    end
   end
 end
