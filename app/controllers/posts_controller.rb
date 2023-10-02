@@ -45,6 +45,6 @@ class PostsController < ApplicationController
   end
 
   def like_exist?(post, user_id)
-    post.likes.where(author: user_id)
+    post.likes.where(author: user_id).exists?
   end
 end

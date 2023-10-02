@@ -14,7 +14,7 @@ module ApplicationHelper
     tag.html_safe
   end
 
-  def comments_exist(comments, post)
+  def comments_exist?(comments, post)
     tag = if comments.positive?
             "<ul class='border comments-list'>
               #{render partial: 'partials/comments_card', collection: post.five_recent_comments, as: :comment}
@@ -65,7 +65,7 @@ module ApplicationHelper
   end
 
   def add_like
-    if @liked.exists?
+    if @liked
       button_to "Don't like", deletelike_user_post_path(@post.author, @post), method: :delete, class: 'btn-like'
     else
       button_to 'Like', createlike_user_post_path(@post.author, @post), method: :post, class: 'btn-like'

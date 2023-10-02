@@ -1,4 +1,4 @@
 <div class="d-flex-col">
   <%= render partial: 'posts_card', object: post, as: :post %>
-  <%= comments_exist(post.comments_counter, post) %>
+  <%= comments_exist?(post.comments_counter, post) %>
 </div>
