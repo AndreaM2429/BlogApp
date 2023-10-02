@@ -1,9 +1,8 @@
 module CommentsHelper
   def comments_exist?(comments, post)
-    five = @five_comments["#{post.id}_id"]
     tag = if comments.positive?
             "<ul class='border comments-list'>
-              #{render partial: 'partials/comments_card', collection: five, as: :comment}
+              #{render partial: 'partials/comments_card', collection: post.comments, as: :comment}
             </ul>"
           else
             ''
