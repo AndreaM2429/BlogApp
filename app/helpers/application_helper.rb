@@ -3,41 +3,6 @@ module ApplicationHelper
     text.length <= 85 ? text : "#{text[0..85]}..."
   end
 
-  def show_all_post(user)
-    tag = if user.postsCounter.positive?
-            "<button>
-              #{link_to 'See all posts', user_posts_path(user)}
-            </button>"
-          else
-            "<span class='no-post'><Table>This user doesn't have posts yet</Table></span>"
-          end
-    tag.html_safe
-  end
-
-  def comments_exist?(comments, post)
-    tag = if comments.positive?
-            "<ul class='border comments-list'>
-              #{render partial: 'partials/comments_card', collection: post.five_recent_comments, as: :comment}
-            </ul>"
-          else
-            ''
-          end
-    tag.html_safe
-  end
-
-  def show_all_comments(post)
-    tag = if post.comments_counter.positive?
-            "<ul class='border comments-list'>
-              #{render partial: 'partials/comments_card', collection: post.comments, as: :comment}
-            </ul>"
-          else
-            "<ul class='border comments-list'>
-              <li>No comments yet</li>
-            </ul>"
-          end
-    tag.html_safe
-  end
-
   def buttons_new_actions
     nav = ''
     if controller_name == 'posts' && action_name == 'new'

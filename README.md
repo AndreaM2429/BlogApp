@@ -92,6 +92,10 @@
 
 - **Add and delete a like**
 
+- **Integration specs for the views using Capybara**
+
+- **Pagination with kaminari gem**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,16 +185,19 @@ Or just `rspec`, additional you can specify the path of one specific file if you
 - Twitter: [@AndreaManuelOr1](https://twitter.com/AndreaManuelOr1)
 - LinkedIn: [Andrea Manuel](https://www.linkedin.com/in/andreamanuel24/)
 
+👤 **Javier Grau**
+- GitHub: [grauJavier](https://github.com/grauJavier)
+- Twitter: [@jgrauchile](https://twitter.com/jgrauchile)
+- LinkedIn: [@javiergrau](https://www.linkedin.com/in/javiergrau/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **n+1 problems.**
 - [ ] **Add Devise.**
 - [ ] **Add authorization rules.**
-- [ ] **Integration specs for Views.**
 - [ ] **Add API endpoints.**
 - [ ] **API documentation.**
 

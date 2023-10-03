@@ -69,6 +69,11 @@ a {
   gap: 20px;
 }
 
+.pagination a {
+  text-decoration: underline;
+  text-decoration-color: rgb(153, 0, 255);
+}
+
 .border {
   border: 1px solid black;
   padding: 10px;

@@ -4,9 +4,9 @@
   <%= render partial: 'posts_comments', collection: @posts, as: :post %>
   
   <div class="d-flex btn-nav">
-    <button class="pagination">
-      <%= link_to 'Pagination', users_path %>
-    </buttton>
+    <span class="pagination">
+      <%= paginate @posts, window: 2 %>
+    </span>
     <%= navigation_buttons %>
   </div>
 </section>
