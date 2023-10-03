@@ -63,6 +63,11 @@ h3 {
   justify-content: left;
 }
 
+.pagination a {
+  text-decoration: underline;
+  text-decoration-color: rgb(153, 0, 255);
+}
+
 a {
   text-decoration: none;
   color: black;
