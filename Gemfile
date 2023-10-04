@@ -79,3 +79,5 @@ end
 
 # Paginacion
 gem 'kaminari'
+
+gem "devise", "~> 4.9"
