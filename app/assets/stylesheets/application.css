@@ -284,6 +284,10 @@ label {
     width: 587px;
   }
 
+  .user-container .new_user {
+    width: 270px;
+  }
+
   .btn-comen form {
     width: 80px;
   }
@@ -305,10 +309,6 @@ label {
   .btn-comen,
   .btn-cont {
     width: 770px;
-  }
-
-  .user-container form {
-    width: 587px;
   }
 
   .btn-comen form {
