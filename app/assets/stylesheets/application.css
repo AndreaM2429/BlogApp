@@ -196,16 +196,16 @@ label {
   flex-direction: column;
   align-items: flex-start;
   width: 270px;
+  gap: 13px;
 }
 
-.new_user input[type="submit"] {
-  width: auto;
-}
-
+.new_user input[type="submit"],
 .new_user input[type="text"],
 .new_user input[type="email"],
-.new_user input[type="password"] {
-  width: 190px;
+.new_user input[type="password"],
+#user_bio {
+  min-width: 250px;
+  min-height: 20px;
 }
 
 .center {
