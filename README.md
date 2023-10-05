@@ -96,6 +96,10 @@
 
 - **Pagination with kaminari gem**
 
+- **Devise gem**
+
+- **Letter_opener**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,7 +200,6 @@ Or just `rspec`, additional you can specify the path of one specific file if you
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Devise.**
 - [ ] **Add authorization rules.**
 - [ ] **Add API endpoints.**
 - [ ] **API documentation.**
