@@ -26,7 +26,7 @@ module PostsHelper
 
     return '' unless can?(:delete, post)
 
-    tag << "<div class='btn-cont d-flex'>
+    tag << "<div class='d-flex btn-del'>
               #{button_to('Delete post', user_post_path(user, post), method: :delete, remote: true)}
             </div>"
     tag.html_safe
