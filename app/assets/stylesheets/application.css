@@ -202,6 +202,12 @@ label {
   width: auto;
 }
 
+.new_user input[type="text"],
+.new_user input[type="email"],
+.new_user input[type="password"] {
+  width: 190px;
+}
+
 .center {
   gap: 3px;
 }
