@@ -28,7 +28,8 @@ module CommentsHelper
 
     return '' unless can?(:delete, comment)
 
-    tag << button_to('Delete comment', user_post_comment_path(comment.post.author, comment.post, comment), method: :delete, remote: true).to_s
+    tag << button_to('Delete comment', user_post_comment_path(comment.post.author, comment.post, comment),
+                     method: :delete, remote: true).to_s
     tag.html_safe
   end
 end

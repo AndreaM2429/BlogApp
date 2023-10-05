@@ -42,10 +42,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     Comment.where(post_id: @post).delete_all if Comment.where(post_id: @post).any?
     user = User.find(params[:user_id])
-    if @post.destroy
-      @post.update_post_counter
-      redirect_to user_path(user)
-    end
+    return unless @post.destroy
+
+    @post.update_post_counter
+    redirect_to user_path(user)
   end
 
   private

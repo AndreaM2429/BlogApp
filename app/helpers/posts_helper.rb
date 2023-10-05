@@ -12,11 +12,11 @@ module PostsHelper
 
   def create_post(user)
     tag = ''
-    
+
     return '' unless current_user == user
 
     tag << "<div class='btn-cont d-flex'>
-             <button>#{ link_to 'Create post', new_user_post_path(user) }</button>
+             <button>#{link_to 'Create post', new_user_post_path(user)}</button>
            </div>"
     tag.html_safe
   end
@@ -27,7 +27,7 @@ module PostsHelper
     return '' unless can?(:delete, post)
 
     tag << "<div class='btn-cont d-flex'>
-              #{ button_to('Delete post', user_post_path(user, post), method: :delete, remote: true) }
+              #{button_to('Delete post', user_post_path(user, post), method: :delete, remote: true)}
             </div>"
     tag.html_safe
   end

@@ -20,10 +20,10 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     user = User.find(params[:user_id])
-    if @comment.destroy
-      @comment.update_comments_counter
-      redirect_to user_post_path(user, @comment.post)
-    end
+    return unless @comment.destroy
+
+    @comment.update_comments_counter
+    redirect_to user_post_path(user, @comment.post)
   end
 
   private
