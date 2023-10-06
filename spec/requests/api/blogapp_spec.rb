@@ -40,27 +40,26 @@ RSpec.describe 'api/my', type: :request do
         produces 'application/json'
         response '200', 'OK' do
           let(:user) { create(:user) }
-          let(:user_2) { create(:user) }
+          let(:user_b) { create(:user) }
           let(:user_id) { user.id }
           let(:new_post) { create(:post, author: user) }
           let(:post_id) { new_post.id }
           let(:new_comment) { create(:comment, author: user_2) }
           schema type: :array,
-            items: {
-              type: :object,
-              properties: {
-                id: { type: :integer },
-                author_id: { type: :integer },
-                text: { type: :string },
-                created_at: { type: :string },
-                updated_at: { type: :string }
-              },
-              required: ['id', 'author_id', 'text', 'created_at', 'updated_at']
-            }
+                 items: {
+                   type: :object,
+                   properties: {
+                     id: { type: :integer },
+                     author_id: { type: :integer },
+                     text: { type: :string },
+                     created_at: { type: :string },
+                     updated_at: { type: :string }
+                   },
+                   required: %w[id author_id text created_at updated_at]
+                 }
           run_test!
         end
       end
     end
   end
-
 end
