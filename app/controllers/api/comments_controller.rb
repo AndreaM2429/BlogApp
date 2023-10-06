@@ -13,7 +13,7 @@ class Api::CommentsController < ApplicationController
 
     author = post.author
 
-    comment = post.comments.new(text: text, author: author)
+    comment = post.comments.new(text:, author:)
 
     if comment.save
       render json: comment, status: :created
