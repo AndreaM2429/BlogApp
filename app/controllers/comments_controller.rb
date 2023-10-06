@@ -6,6 +6,12 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new
   end
 
+  def index
+    post = Post.find(params[:post_id])
+    comments = post.comments
+    render json: comments
+  end
+
   def create
     post = Post.find(params[:post_id])
     comment = post.comments.new(comment_params)
