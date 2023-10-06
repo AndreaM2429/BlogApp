@@ -6,9 +6,7 @@
     <p><%= @user.bio %></p>
   </div>
   
-  <div class="btn-cont d-flex">
-    <button><%= link_to 'Create post', new_user_post_path(@user) %></button>
-  </div>
+  <%= create_post(@user) %>
 
   <div class="d-flex-col post-container">
     <%= render partial: 'posts/posts_card', collection: @user.three_recent_posts, as: :post %>

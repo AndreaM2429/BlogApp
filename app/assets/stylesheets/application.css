@@ -212,6 +212,23 @@ label {
   gap: 3px;
 }
 
+.btn-del {
+  width: 90%;
+  justify-content: end;
+}
+
+.btn-del form {
+  width: 90px;
+}
+
+.comment-space {
+  justify-content: space-between;
+}
+
+.comment-space form {
+  width: 130px;
+}
+
 @keyframes cssanimation {
   0% { opacity: 1; }
   90% { opacity: 1; }
@@ -275,6 +292,14 @@ label {
   .nav {
     width: 80%;
   }
+
+  .btn-del {
+    width: 640px;
+  }
+
+  .btn-del form {
+    width: 100px;
+  }
 }
 
 @media (min-width: 964px) {
@@ -296,6 +321,18 @@ label {
 
   .btn-comen form {
     width: 80px;
+  }
+
+  .btn-del {
+    width: 643px;
+  }
+
+  .btn-del form {
+    width: 100px;
+  }
+
+  .comment-space form {
+    width: 130px;
   }
 }
 
