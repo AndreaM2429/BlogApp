@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
     comment = post.comment.new(text:, author:)
 
     return unless comment.save
-    
+
     render json: comment
   end
 
