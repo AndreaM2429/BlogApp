@@ -14,13 +14,17 @@ class CommentsController < ApplicationController
 
   def create
     post = Post.find(params[:post_id])
-    comment = post.comments.new(comment_params)
-    comment.author = current_user
-    if comment.save
-      redirect_to user_post_path(post.author, post)
-    else
-      render :new
-    end
+
+    json_request = JSON.parse(request.body.read)
+    text = json_request['text']
+
+    author = post.author
+
+    comment = post.comment.new(text:, author:)
+
+    return unless comment.save
+    
+    render json: comment
   end
 
   def destroy
