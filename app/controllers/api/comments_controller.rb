@@ -13,10 +13,12 @@ class Api::CommentsController < ApplicationController
 
     author = post.author
 
-    comment = post.comment.new(text:, author:)
+    comment = post.comments.new(text:, author:)
 
-    return unless comment.save
-
-    render json: comment
+    if comment.save
+      render json: comment, status: :created
+    else
+      render json: { errors: comment.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 end
