@@ -1,6 +1,6 @@
 require 'swagger_helper'
 
-RSpec.describe 'api/my', type: :request do
+RSpec.describe 'API post get', type: :request do
   describe 'API' do
     path '/api/users/{user_id}/posts' do
       parameter name: 'user_id', in: :path, type: :integer
@@ -63,12 +63,12 @@ RSpec.describe 'api/my', type: :request do
     end
   end
 
-  describe '' do
+  describe 'API comments post endpoint' do
     path '/api/users/{user_id}/posts/{post_id}/comments' do
       post 'Create a comment on a post' do
         tags 'Comment'
         consumes 'application/json'
-  
+
         parameter name: :user_id, in: :path, type: :string
         parameter name: :post_id, in: :path, type: :string
         parameter name: :text, in: :body, type: :string
@@ -78,16 +78,16 @@ RSpec.describe 'api/my', type: :request do
                  properties: {
                    author_id: { type: :integer },
                    post_id: { type: :integer },
-                   text: { type: :string },
+                   text: { type: :string }
                  },
                  required: %w[author_id post_id text]
-  
+
           let(:user) { create(:user) }
           let(:user_id) { user.id }
           let(:new_post) { create(:post, author: user) }
           let(:post_id) { new_post.id }
-            
-  
+          let(:text) { { text: 'Test comment' } }
+
           run_test!
         end
       end
