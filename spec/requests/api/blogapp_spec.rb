@@ -62,4 +62,35 @@ RSpec.describe 'api/my', type: :request do
       end
     end
   end
+
+  describe '' do
+    path '/api/users/{user_id}/posts/{post_id}/comments' do
+      post 'Create a comment on a post' do
+        tags 'Comment'
+        consumes 'application/json'
+  
+        parameter name: :user_id, in: :path, type: :string
+        parameter name: :post_id, in: :path, type: :string
+        parameter name: :text, in: :body, type: :string
+
+        response '201', 'Comment created' do
+          schema type: :object,
+                 properties: {
+                   author_id: { type: :integer },
+                   post_id: { type: :integer },
+                   text: { type: :string },
+                 },
+                 required: %w[author_id post_id text]
+  
+          let(:user) { create(:user) }
+          let(:user_id) { user.id }
+          let(:new_post) { create(:post, author: user) }
+          let(:post_id) { new_post.id }
+            
+  
+          run_test!
+        end
+      end
+    end
+  end
 end

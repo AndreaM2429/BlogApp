@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.1
 info:
-  title: API V1
+  title: BlogApp API
   version: v1
 paths:
   "/api/users/{user_id}/posts":
@@ -88,8 +88,33 @@ paths:
                   - text
                   - created_at
                   - updated_at
+    post:
+      summary: Create a comment on a post
+      tags:
+      - Comment
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: post_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Comment created
+        '422':
+          description: Unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
 servers:
-- url: https://{defaultHost}
+- url: http://{defaultHost}
   variables:
     defaultHost:
-      default: www.example.com
+      default: localhost:3000
