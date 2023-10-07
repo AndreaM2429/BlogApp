@@ -1,4 +1,6 @@
 class Api::CommentsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create]
+
   def index
     post = Post.find(params[:post_id])
     comments = post.comments
